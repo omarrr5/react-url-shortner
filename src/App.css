@@ -260,3 +260,38 @@
   transform-origin: 20vw 0vh;
   box-shadow: 40vmin 0 5.3420318107746825vmin currentColor;
 }
+
+.footer{
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  margin-top: 200px;
+}
+
+.footer span{
+  color: var(--primary-color);
+}
+
+.result{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+}
+
+.result p{
+  color: #fff;
+  border: 1px solid var(--primary-color);
+  padding: 0.5rem 1rem;
+  margin-right: 1rem;
+}
+
+.result button{
+  padding: 0.5rem 1rem;
+  color: #fff;
+  cursor: pointer;
+  background: var(--primary-color);
+  border: none;
+}
