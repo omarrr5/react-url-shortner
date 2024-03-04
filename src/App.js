@@ -1,9 +1,12 @@
 import './App.css';
+import BackgroundAnimation from './components/BackgroundAnimation';
+import InputShortner from './components/InputShortner';
 
 function App() {
   return (
-    <div className="App">
-      <h1>hi</h1>
+    <div className="container">
+      <InputShortner/>
+      <BackgroundAnimation/>
     </div>
   );
 }
