@@ -295,3 +295,8 @@
   background: var(--primary-color);
   border: none;
 }
+
+.result button.copied{
+  background: #fff;
+  color: var(--primary-color);
+}
