@@ -267,7 +267,6 @@
   text-align: center;
   align-items: center;
   justify-content: center;
-  margin-top: 200px;
 }
 
 .footer span{
@@ -299,4 +298,10 @@
 .result button.copied{
   background: #fff;
   color: var(--primary-color);
+}
+
+.noData {
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
 }
