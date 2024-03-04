@@ -11,15 +11,24 @@ const LinkResult = ({ inputValue }) => {
   const fetchData = async () => {
     try {
       setLoading(true);
-      const res = await axios(`https://api.shrtco.de/v2/shorten?url=${inputValue}`);
-      setShortenLink(res.data.result.full_short_link);
+      const url = `https://url-link-shortener.p.rapidapi.com/v1/links/new?destination=${encodeURIComponent(inputValue)}`;
+      const options = {
+        method: 'GET',
+        headers: {
+          'X-RapidAPI-Key': 'da5baf56damsh5a24ddf504de2a3p1c3651jsnbb3104e06c22',
+          'X-RapidAPI-Host': 'url-link-shortener.p.rapidapi.com'
+        }
+      };
+      const response = await fetch(url, options);
+      const result = await response.json(); 
+      setShortenLink(result.shortened_link);
     } catch(err) {
       setError(err);
     } finally {
       setLoading(false);
     }
-  }
-
+  };
+  
   useEffect(() => {
     if(inputValue.length) {
       fetchData();
